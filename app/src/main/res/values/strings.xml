@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">What he say</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
 </resources>

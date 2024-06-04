@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
@@ -44,6 +44,37 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_menu_24dp"
                     app:tint="?attr/colorOnPrimaryContainer" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/refreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/connectButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:text="@string/connect"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:icon="@drawable/ic_link_24dp"
+                    app:iconTint="?attr/colorOnPrimary"
+                    app:strokeColor="?attr/colorOnPrimary"
+                    app:strokeWidth="2dp" />
 
             </FrameLayout>
 
